@@ -1,7 +1,7 @@
 
 
 # Importing the OpenROAD library - which is only available when running openroad -python
-from openroad import Design, Tech
+from openroad import Design, Tech, get_db
 from odb import *
 from pathlib import Path
 
@@ -14,7 +14,7 @@ tech.readLiberty("../sg13g2_stdcell_typ_1p20V_25C.lib")
 design = Design(tech) # Every Design has to be associated with a Tech, even if it's empty.
 
 design.readDb("section3.odb")
-library = design.getDb().getLibs()[0] # This gets the only loaded library - the IHP130 PDK
+library = get_db().getLibs()[0] # This gets the only loaded library - the IHP130 PDK
 dbu_per_micron = library.getDbUnitsPerMicron()
 cam_vertical_offset = library.getSites()[0].getHeight()
 block = design.getBlock()

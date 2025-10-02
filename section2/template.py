@@ -1,10 +1,9 @@
 
 
 # Importing the OpenROAD library - which is only available when running openroad -python
-from openroad import Design, Tech
+from openroad import Design, Tech, get_db
 from odb import *
 from pathlib import Path
-
 
 # If we had a separate .lef, we could run tech.readLef but we're using a db here that comes packaged with the library.
 tech = Tech()
@@ -14,7 +13,7 @@ tech.readLiberty("../sg13g2_stdcell_typ_1p20V_25C.lib")
 design = Design(tech) # Every Design has to be associated with a Tech, even if it's empty.
 
 design.readDb("section2.odb")
-library = design.getDb().getLibs()[0] # This gets the only loaded library - the IHP130 PDK
+library = get_db().getLibs()[0] # This gets the only loaded library - the IHP130 PDK
 dbu_per_micron = library.getDbUnitsPerMicron()
 block = design.getBlock()
 
