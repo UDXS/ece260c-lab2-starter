@@ -3,8 +3,8 @@
 export PLATFORM         = ihp-sg13g2
 export DESIGN_NAME      = section2
 
-export VERILOG_FILES    = section2.v
-export SDC_FILE         = constraint.sdc
+export VERILOG_FILES    = /home/ece260c-lab2-starter/section2/design/section2.v
+export SDC_FILE         = /home/ece260c-lab2-starter/section2/design/constraint.sdc
 
 export USE_FILL = 0
 
