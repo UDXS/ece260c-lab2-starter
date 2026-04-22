@@ -1,1 +1,1 @@
-# ece260c-lab2-starter
+# ECE 260C Lab 2 Starter
