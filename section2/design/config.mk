@@ -8,6 +8,6 @@ export SDC_FILE         = constraint.sdc
 
 export USE_FILL = 0
 
-export CORE_UTILIZATION = 10
+export CORE_UTILIZATION = 20
 export PLACE_DENSITY    = 0.5
 export TNS_END_PERCENT  = 100
